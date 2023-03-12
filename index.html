@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="images/favicon-32x32.png" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>OrderSummary</title>
+  </head>
+  <body>
+    <div class="bg">
+      <img
+        class="bgi node"
+        src="images/pattern-background-desktop.svg"
+        alt=""
+      />
+      <div class="ver">
+        <img class="veri node" src="images/illustration-hero.svg" alt="" />
+        <div id="title">
+          <strong>Order Summary</strong>
+        </div>
+        <div>
+          <p id="top">
+            Now you can listen millions of song , audiobooks ,podcasts on any
+            device any where you like.
+          </p>
+        </div>
+        <div id="mid">
+          <span id="icon"
+            ><img class="node" src="images/icon-music.svg" alt="" height="70%"
+          /></span>
+          <span id="annual">
+            <p id="topA">Annual Plan</p>
+            <p id="topB">$15.59/year</p>
+          </span>
+          <a id="change" onclick="changePlan()" href="#">change</a>
+        </div>
+      </div>
+      <button id="btn" onclick="pay()" class="btn">Proceed to Payment</button>
+    </div>
+
+    <script>
+      // var target = document.getElementById("change");
+      // target.addEventListener("click", changePlan);
+      
+      function changePlan() {
+        let x=document.getElementById("topB");
+        if(x.innerHTML=="$15.59/year"){
+          x.innerHTML = "$30.00 for 2 yrs";
+        }else{
+          x.innerHTML="$15.59/year";
+        }
+        
+      }
+      // let btnTarget = document.getElementById("btn");
+      // btnTarget.addEventListener("click", pay);
+      function pay() {
+        swal("Sorry!" , " Payment function is not added to this page.","error");
+      }
+
+      // var nodeList = document.querySelectorAll(".node");
+      // for (let i = 0; i < nodeList.length; i++) {
+      //   nodeList[i].style.border = "solid 0.5px cyan";
+      // }
+    </script>
+  </body>
+</html>
